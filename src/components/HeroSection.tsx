@@ -13,12 +13,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartQuest, onOpenGa
   const { personal } = PORTFOLIO_DATA;
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-between items-center px-4 pt-16 pb-8 overflow-hidden select-none">
+    <section className="relative min-h-screen w-full max-w-full flex flex-col justify-between items-center px-3 sm:px-4 pt-16 pb-8 overflow-hidden select-none">
       {/* Background Cosmic Deep Space Glow in Cyber Emerald */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-[#059669]/20 blur-[120px]" />
-        <div className="absolute top-1/3 -right-32 w-[550px] h-[550px] rounded-full bg-[#10b981]/15 blur-[130px]" />
-        <div className="absolute -bottom-32 left-1/3 w-[700px] h-[700px] rounded-full bg-[#047857]/20 blur-[140px]" />
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden max-w-full">
+        <div className="absolute -top-32 -left-32 w-72 sm:w-[600px] h-72 sm:h-[600px] rounded-full bg-[#059669]/20 blur-[80px] sm:blur-[120px]" />
+        <div className="absolute top-1/3 -right-32 w-72 sm:w-[550px] h-72 sm:h-[550px] rounded-full bg-[#10b981]/15 blur-[80px] sm:blur-[130px]" />
+        <div className="absolute -bottom-32 left-1/3 w-72 sm:w-[700px] h-72 sm:h-[700px] rounded-full bg-[#047857]/20 blur-[80px] sm:blur-[140px]" />
         <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#030c06]/60 to-[#030c06]" />
       </div>
 
@@ -48,9 +48,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartQuest, onOpenGa
       </header>
 
       {/* Center 3D Pixel Title */}
-      <div className="relative z-10 my-auto text-center flex flex-col items-center justify-center px-4 py-8">
+      <div className="relative z-10 my-auto text-center flex flex-col items-center justify-center px-2 sm:px-4 py-8 max-w-full w-full">
         {/* Top Decorative Sparkles */}
-        <div className="flex items-center gap-3 mb-4 text-[#bef264] font-pixelify font-bold text-sm md:text-base">
+        <div className="flex items-center gap-2 sm:gap-3 mb-4 text-[#bef264] font-pixelify font-bold text-xs sm:text-sm md:text-base">
           <span className="animate-pixel-twinkle">✦</span>
           <span className="tracking-widest uppercase text-emerald-300">
             PIXEL ART PORTFOLIO ARCHIVE
@@ -59,29 +59,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartQuest, onOpenGa
         </div>
 
         {/* 3D Beveled Pixel Name (Always Single Line) */}
-        <h1 className="pixel-3d-title whitespace-nowrap text-[13px] min-[400px]:text-sm sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl mb-3 tracking-normal sm:tracking-wide max-w-full select-none">
+        <h1 className="pixel-3d-title whitespace-nowrap text-[12px] min-[360px]:text-[13px] sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl mb-3 tracking-normal sm:tracking-wide max-w-full select-none">
           {personal.name}
         </h1>
 
         {/* Subtitle: PORTFOLIO (3xl) */}
-        <div className="pixel-3d-sub text-lg sm:text-2xl md:text-3xl font-bold tracking-[0.25em] uppercase mb-4 select-none">
+        <div className="pixel-3d-sub text-base sm:text-2xl md:text-3xl font-bold tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-4 select-none">
           PORTFOLIO
         </div>
 
         {/* Tagline */}
-        <div className="font-pixelify text-xs sm:text-sm md:text-base font-semibold text-mint-100 tracking-wider mb-6 sm:mb-8 bg-[#042413]/80 px-4 py-2 border border-[#6ee7b7]/40 shadow-[2px_2px_0_#022c15]">
+        <div className="font-pixelify text-[11px] min-[360px]:text-xs sm:text-sm md:text-base font-semibold text-mint-100 tracking-wide sm:tracking-wider mb-6 sm:mb-8 bg-[#042413]/80 px-3 sm:px-4 py-2 border border-[#6ee7b7]/40 shadow-[2px_2px_0_#022c15] max-w-full">
           ★ {personal.subtitle} ★
         </div>
 
         {/* Action Buttons Row */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl font-pixelify font-bold">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 max-w-2xl w-full font-pixelify font-bold">
           <button
             type="button"
             onClick={() => {
               sound.playClick();
               onStartQuest();
             }}
-            className="pixel-btn text-xs sm:text-sm px-5 py-3 bg-[#059669] border-2 border-[#a7f3d0] text-white shadow-[3px_3px_0_#064e3b]"
+            className="pixel-btn text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 bg-[#059669] border-2 border-[#a7f3d0] text-white shadow-[3px_3px_0_#064e3b]"
           >
             ▶ START EXPLORING
           </button>
@@ -90,7 +90,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartQuest, onOpenGa
             href={personal.cvDownload}
             download="Luong_Luu_Minh_Tan_CV.pdf"
             onClick={() => sound.playHeart()}
-            className="pixel-btn text-xs sm:text-sm px-5 py-3 bg-[#047857] border-2 border-[#6ee7b7] text-emerald-100 hover:text-white"
+            className="pixel-btn text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 bg-[#047857] border-2 border-[#6ee7b7] text-emerald-100 hover:text-white"
           >
             📜 DOWNLOAD CV
           </a>
@@ -100,7 +100,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartQuest, onOpenGa
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => sound.playClick()}
-            className="pixel-btn text-xs sm:text-sm px-5 py-3 bg-[#064e3b] border-2 border-[#34d399] text-emerald-200 hover:text-white"
+            className="pixel-btn text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 bg-[#064e3b] border-2 border-[#34d399] text-emerald-200 hover:text-white"
           >
             👾 GITHUB
           </a>
@@ -111,7 +111,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onStartQuest, onOpenGa
               sound.playBlip();
               onOpenGame();
             }}
-            className="pixel-btn text-xs sm:text-sm px-5 py-3 bg-[#0284c7] border-2 border-[#7dd3fc] text-sky-100 hover:text-white"
+            className="pixel-btn text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 bg-[#0284c7] border-2 border-[#7dd3fc] text-sky-100 hover:text-white"
           >
             🎮 MINI-GAME
           </button>

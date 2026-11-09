@@ -47,17 +47,17 @@ export const RetroNavbar: React.FC<RetroNavbarProps> = ({
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-[#041409]/92 border-b-2 border-[#10b981] backdrop-blur-md select-none px-3 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.85)]">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-[#041409]/92 border-b-2 border-[#10b981] backdrop-blur-md select-none px-2 sm:px-3 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.85)] max-w-full">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-3 min-w-0">
         {/* Left: Avatar + Player Tag */}
         <div
           onClick={() => {
             sound.playHeart();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="flex items-center gap-2 cursor-pointer group"
+          className="flex items-center gap-1.5 sm:gap-2 cursor-pointer group shrink-0"
         >
-          <div className="w-8 h-8 rounded-full border-2 border-[#34d399] overflow-hidden bg-[#042413] p-0.5 group-hover:scale-110 transition-transform">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-[#34d399] overflow-hidden bg-[#042413] p-0.5 group-hover:scale-110 transition-transform shrink-0">
             <Image
               src={personal.avatar}
               alt="Avatar"
@@ -67,10 +67,10 @@ export const RetroNavbar: React.FC<RetroNavbarProps> = ({
             />
           </div>
           <div>
-            <div className="font-pixelify font-bold text-xs sm:text-sm text-white group-hover:text-[#bef264] transition-colors">
+            <div className="font-pixelify font-bold text-xs sm:text-sm text-white group-hover:text-[#bef264] transition-colors leading-none mb-0.5">
               AKURO
             </div>
-            <div className="font-pixelify text-xs text-[#6ee7b7] font-semibold">
+            <div className="font-pixelify text-[10px] sm:text-xs text-[#6ee7b7] font-semibold leading-none">
               Lv.{personal.level} Flutter
             </div>
           </div>
@@ -116,7 +116,7 @@ export const RetroNavbar: React.FC<RetroNavbarProps> = ({
         </div>
 
         {/* Right: Controls & Mini-game button */}
-        <div className="flex items-center gap-1.5 sm:gap-2">
+        <div className="flex items-center gap-1 sm:gap-2 shrink-0">
           {/* Mini-Game Button */}
           <button
             type="button"
@@ -129,7 +129,7 @@ export const RetroNavbar: React.FC<RetroNavbarProps> = ({
                 ? "Secret Arcade Unlocked! Click to open game folder"
                 : "Play Retro Easter Egg Game"
             }
-            className={`pixel-btn text-xs font-pixelify font-bold px-2.5 py-1 transition-all ${
+            className={`pixel-btn text-xs font-pixelify font-bold px-2 sm:px-2.5 py-1 transition-all ${
               isGameYellow
                 ? "bg-[#facc15] text-[#022c15] border-2 border-[#fef08a] shadow-[0_0_16px_rgba(250,204,21,0.9)] animate-pulse hover:bg-[#fde047]"
                 : "bg-[#047857] text-white border-[#6ee7b7] hover:bg-[#065f46]"
@@ -147,7 +147,7 @@ export const RetroNavbar: React.FC<RetroNavbarProps> = ({
               onToggleCrt();
             }}
             title="Toggle Retro CRT Scanlines"
-            className={`font-pixelify font-bold text-xs px-2.5 py-1 border transition-all ${
+            className={`font-pixelify font-bold text-xs px-2 sm:px-2.5 py-1 border transition-all ${
               crtEnabled
                 ? "bg-[#065f46] text-emerald-200 border-[#6ee7b7]"
                 : "bg-[#04190c] text-emerald-300 border-[#064e3b]"

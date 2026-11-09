@@ -51,12 +51,12 @@ export const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex flex-col items-center justify-between px-4 py-16 overflow-hidden select-none"
+      className="relative min-h-screen w-full max-w-full flex flex-col items-center justify-between px-3 sm:px-4 py-16 overflow-hidden select-none"
     >
       {/* Background Cosmic Atmosphere in Green */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute -top-32 left-1/4 w-[600px] h-[600px] rounded-full bg-[#059669]/20 blur-[130px]" />
-        <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] rounded-full bg-[#047857]/20 blur-[120px]" />
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden max-w-full">
+        <div className="absolute -top-32 left-1/4 w-72 sm:w-[600px] h-72 sm:h-[600px] rounded-full bg-[#059669]/20 blur-[80px] sm:blur-[130px]" />
+        <div className="absolute bottom-10 right-1/4 w-72 sm:w-[500px] h-72 sm:h-[500px] rounded-full bg-[#047857]/20 blur-[80px] sm:blur-[120px]" />
       </div>
 
       {/* Top 3D Title: THANKS FOR YOUR TIME! */}
@@ -67,7 +67,7 @@ export const ContactSection: React.FC = () => {
           <span className="animate-pixel-twinkle">✦</span>
         </div>
 
-        <h2 className="pixel-3d-title text-2xl sm:text-5xl md:text-7xl lg:text-8xl tracking-wide max-w-4xl mx-auto leading-tight">
+        <h2 className="pixel-3d-title text-xl sm:text-4xl md:text-6xl lg:text-8xl tracking-normal sm:tracking-wide max-w-full mx-auto leading-tight px-2">
           THANKS FOR YOUR TIME!
         </h2>
       </div>

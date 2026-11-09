@@ -156,7 +156,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#030e06] text-white selection:bg-emerald-600 selection:text-white">
+    <main className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-[#030e06] text-white selection:bg-emerald-600 selection:text-white">
       {/* Background Interactive Pixel Starfield & Meteors */}
       <SpaceCanvas />
 
