@@ -62,21 +62,16 @@ export const SkillsSection: React.FC = () => {
                 key={idx}
                 className="bg-[#04190c] border-2 border-[#064e3b] p-3.5 hover:border-[#34d399] transition-all group"
               >
-                {/* Skill Name & Level */}
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2">
-                    <span className="font-pixelify font-bold text-sm sm:text-base text-white group-hover:text-[#bef264] transition-colors">
-                      {skill.name}
-                    </span>
-                    {skill.tag && (
-                      <span className="font-pixelify text-xs font-semibold bg-[#042c16] text-mint-200 px-2 py-0.5 border border-[#34d399]/30">
-                        {skill.tag}
-                      </span>
-                    )}
-                  </div>
-                  <span className="font-pixelify font-bold text-xs sm:text-sm text-[#bef264]">
-                    Lv.{skill.level * 20}
+                {/* Skill Name & Tag */}
+                <div className="flex items-center justify-between mb-2 gap-2">
+                  <span className="font-pixelify font-bold text-sm sm:text-base text-white group-hover:text-[#bef264] transition-colors">
+                    {skill.name}
                   </span>
+                  {skill.tag && (
+                    <span className="font-pixelify text-xs font-semibold bg-[#042c16] text-[#bef264] px-2 py-0.5 border border-[#34d399]/40 shrink-0">
+                      {skill.tag}
+                    </span>
+                  )}
                 </div>
 
                 {/* Pixel Progress Bar */}
